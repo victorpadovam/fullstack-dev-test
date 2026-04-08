@@ -220,6 +220,8 @@ Exemplo:
 }
 ```
 
+### Cache
+Não utilizei cache neste teste, mas em produção utilizaria Redis para armazenamento temporário e redução de chamadas repetidas à API/LLM.
 
 ### Testes
  - npm test
