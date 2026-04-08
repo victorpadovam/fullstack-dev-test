@@ -134,4 +134,4 @@ As seguintes situações são tratadas como falha:
 
 ## Demo Video
 
-[▶️ Watch the demo video](./video.mov)
+[▶️ Watch the demo video](./video.mp4)
