@@ -28,7 +28,7 @@ class SuggestionList extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text(
-            'Suggestions:',
+            'Sugestões:',
             style: TextStyle(
               fontSize: 15,
               fontWeight: FontWeight.w500,
@@ -61,7 +61,7 @@ class SuggestionList extends StatelessWidget {
           }),
           const SizedBox(height: 4),
           Text(
-            'Source: $source',
+            'Fonte: $source',
             style: TextStyle(
               fontSize: 12,
               color: Colors.grey.shade700,

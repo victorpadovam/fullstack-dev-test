@@ -7,7 +7,9 @@ import '../widgets/suggestion_button.dart';
 import '../widgets/suggestion_list.dart';
 
 class SuggestionPage extends StatefulWidget {
-  const SuggestionPage({super.key});
+  final SuggestionController? controller;
+
+  const SuggestionPage({super.key, this.controller});
 
   @override
   State<SuggestionPage> createState() => _SuggestionPageState();
@@ -15,11 +17,14 @@ class SuggestionPage extends StatefulWidget {
 
 class _SuggestionPageState extends State<SuggestionPage> {
   late final SuggestionController controller;
+  late final bool _isExternalController;
 
   @override
   void initState() {
     super.initState();
-    controller = SuggestionController(service: SuggestionService());
+    _isExternalController = widget.controller != null;
+    controller =
+        widget.controller ?? SuggestionController(service: SuggestionService());
     controller.addListener(_listener);
   }
 
@@ -32,7 +37,11 @@ class _SuggestionPageState extends State<SuggestionPage> {
   @override
   void dispose() {
     controller.removeListener(_listener);
-    controller.dispose();
+
+    if (!_isExternalController) {
+      controller.dispose();
+    }
+
     super.dispose();
   }
 
@@ -84,14 +93,14 @@ class _SuggestionPageState extends State<SuggestionPage> {
                   ),
                   const SizedBox(height: 20),
                   CustomTextField(
-                    label: 'Occasion',
-                    hintText: 'e.g., Birthday',
+                    label: 'Ocasião',
+                    hintText: 'Aniversário',
                     controller: controller.occasionController,
                   ),
                   const SizedBox(height: 14),
                   CustomTextField(
-                    label: 'Relationship',
-                    hintText: 'e.g., Mother',
+                    label: 'Relação',
+                    hintText: 'Mãe',
                     controller: controller.relationshipController,
                   ),
                   const SizedBox(height: 18),

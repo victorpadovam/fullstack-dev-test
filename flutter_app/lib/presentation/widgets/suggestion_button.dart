@@ -34,7 +34,7 @@ class SuggestionButton extends StatelessWidget {
                 ),
               )
             : const Text(
-                'Get suggestions',
+                'Receba sugestões',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                 ),
