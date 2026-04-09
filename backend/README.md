@@ -225,7 +225,10 @@ Não utilizei cache neste teste, mas em produção utilizaria Redis para armazen
 
 ### Testes
  - npm test
-    ✓ src/tests/suggestions.controller.test.ts (4 tests) 61ms
-    ✓ src/tests/rate-limit.test.ts (1 test) 73ms
-    Test Files  2 passed (2)
-        Tests  5 passed (5)
+
+ ```json
+ ✓ src/tests/suggestions.controller.test.ts (4 tests) 61ms
+ ✓ src/tests/rate-limit.test.ts (1 test) 73ms
+ Test Files  2 passed (2)
+ Tests  5 passed (5)
+```
