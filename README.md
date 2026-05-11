@@ -1,7 +1,5 @@
-# Technical Test — Senior Developer
+# Technical Test
 
-**Role:** Senior Full Stack Developer  
-**Estimated time:** 4–6 hours  
 **Stack:** TypeScript/Node.js, Flutter/Dart, Firebase (Firestore, Cloud Functions, Auth)
 
 ---
